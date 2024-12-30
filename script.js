@@ -1,8 +1,27 @@
-document.getElementById('contact-form').addEventListener('submit', function(event) {
-    event.preventDefault();
-    
-    // Here you could add functionality to send the form data,
-    // for example using fetch to send it to your server or email service.
-    
-    alert('Thank you for your message! I will get back to you soon.');
+// script.js
+
+// Example interactivity: Smooth scroll to sections
+
+document.querySelectorAll('header .hero-content h1').forEach((element) => {
+    element.addEventListener('click', () => {
+        alert('Welcome to My Portfolio!');
+    });
+});
+
+// Navigation highlight example
+window.addEventListener('scroll', () => {
+    const sections = document.querySelectorAll('section');
+    const scrollPosition = window.scrollY + window.innerHeight / 2;
+
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.offsetHeight;
+
+        if (scrollPosition > sectionTop && scrollPosition < sectionTop + sectionHeight) {
+            document.querySelectorAll('nav a').forEach(link => {
+                link.classList.remove('active');
+            });
+            document.querySelector(`nav a[href="#${section.id}"]`).classList.add('active');
+        }
+    });
 });
