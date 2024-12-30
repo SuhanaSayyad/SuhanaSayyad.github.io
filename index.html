@@ -5,71 +5,168 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Portfolio</title>
     <style>
-        body {
-            background: linear-gradient(120deg, #3204fdba, #6639a6); /* Lighter purple for less intense transition */
-            color: #38c9ff; /* Neon blue text */
-            font-family: 'Arial', sans-serif;
-            background-size: 400% 400%;
-            animation: Gradient 5s ease infinite;
+        /* General Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-        @keyframes Gradient {
-            0%, 100% {
+
+        body {
+            font-family: 'Arial', sans-serif;
+            color: #ffffff; /* White text */
+            background: linear-gradient(120deg, #6A0DAD, #1D2671); /* Vibrant purple to blue gradient */
+            background-size: 200% 200%;
+            animation: gradientMove 6s ease infinite; /* Animated gradient */
+            min-height: 100vh;
+        }
+
+        @keyframes gradientMove {
+            0% {
                 background-position: 0% 50%;
             }
             50% {
                 background-position: 100% 50%;
             }
+            100% {
+                background-position: 0% 50%;
+            }
         }
+
         header {
-            background: transparent;
-            padding: 1rem 0;
-            border-bottom: 3px solid #38c9ff; /* Neon blue underline for header */
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(0, 0, 0, 0.2); /* Slight transparency for contrast */
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
         }
+
         nav ul {
-            list-style-type: none;
-            padding: 0;
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #38c9ff; /* Neon blue links */
+            font-size: 1.2rem;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #00ffcc; /* Aqua hover effect */
+        }
+
+        .hero {
+            text-align: center;
+            margin-top: 10vh;
+            padding: 5rem 2rem;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            color: #FFFFFF;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            color: #00ffcc;
+        }
+
+        .btn {
+            padding: 1rem 2rem;
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #1D2671;
+            background: #00ffcc;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            background: #ffffff;
+            color: #1D2671;
+        }
+
+        section {
+            padding: 5rem 2rem;
             text-align: center;
         }
-        nav ul li {
-            display: inline;
-            margin-right: 20px;
+
+        footer {
+            text-align: center;
+            padding: 2rem 0;
+            background: rgba(0, 0, 0, 0.4); /* Footer transparency */
         }
-        nav a {
-            color: #38c9ff; /* Neon blue links */
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 1.2em;
+
+        footer p {
+            color: #00ffcc;
+            font-size: 1rem;
         }
-        h1 {
-            color: #ffffff; /* White for main headings */
-            font-size: 3em;
-            margin-bottom: 0.5em;
-        }
-        p {
-            color: #38c9ff; /* Consistent neon blue for text */
-            font-size: 1.5em;
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1.2rem;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 1rem;
+            }
         }
     </style>
 </head>
 <body>
     <header>
-        <div class="container mx-auto px-4">
-            <nav>
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#expertise">Expertise</a></li>
-                    <li><a href="#work">Work</a></li>
-                    <li><a href="#experience">Experience</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-            <h1>Your Name</h1>
-            <p>Software Engineer, Front End & App Developer.</p>
+        <div class="logo">
+            <h2>Your Logo</h2>
         </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#work">Work</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
     </header>
-    <section id="home" class="text-center py-10">
-        <p>Welcome to my portfolio site.</p>
+
+    <section class="hero" id="home">
+        <h1>Your Name</h1>
+        <p>Software Engineer | OSINT Expert | Problem Solver</p>
+        <button class="btn">Contact Me</button>
     </section>
-    <!-- Add more sections here as needed -->
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>
+            I am an experienced professional with expertise in software development and OSINT investigations. My work focuses on solving complex problems with innovative solutions.
+        </p>
+    </section>
+
+    <section id="work">
+        <h2>My Work</h2>
+        <p>
+            Check out my latest projects and accomplishments in software development and open-source intelligence.
+        </p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Your Name. All rights reserved.</p>
+    </footer>
 </body>
 </html>
