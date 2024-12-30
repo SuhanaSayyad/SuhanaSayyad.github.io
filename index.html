@@ -4,12 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Portfolio</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.0/dist/tailwind.min.css">
     <style>
         body {
-            background-color: #3204fdba; /* Deep purple background with slight transparency */
+            background: linear-gradient(120deg, #3204fdba, #8a2be2); /* Gradient from your current purple to deep neon purple */
             color: #38c9ff; /* Neon blue text for high contrast */
             font-family: 'Arial', sans-serif; /* Ensuring a clean, modern font */
+            animation: Gradient 3s ease infinite; /* Adding animation to the gradient */
+        }
+        @keyframes Gradient {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
         }
         header {
             background: transparent;
