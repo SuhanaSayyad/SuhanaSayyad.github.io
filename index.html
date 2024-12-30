@@ -6,20 +6,18 @@
     <title>Your Portfolio</title>
     <style>
         body {
-            background: linear-gradient(120deg, #3204fdba, #8a2be2); /* Gradient from your current purple to deep neon purple */
-            color: #38c9ff; /* Neon blue text for high contrast */
-            font-family: 'Arial', sans-serif; /* Ensuring a clean, modern font */
-            animation: Gradient 3s ease infinite; /* Adding animation to the gradient */
+            background: linear-gradient(120deg, #3204fdba, #570a82); /* Adjusted gradient for more contrast */
+            color: #38c9ff; /* Neon blue text */
+            font-family: 'Arial', sans-serif;
+            background-size: 400% 400%;
+            animation: Gradient 5s ease infinite; /* Slower transition for visibility */
         }
         @keyframes Gradient {
-            0% {
+            0%, 100% {
                 background-position: 0% 50%;
             }
             50% {
                 background-position: 100% 50%;
-            }
-            100% {
-                background-position: 0% 50%;
             }
         }
         header {
@@ -40,16 +38,16 @@
             color: #38c9ff; /* Neon blue links */
             text-decoration: none;
             font-weight: bold;
-            font-size: 1.2em; /* Slightly larger font size for better readability */
+            font-size: 1.2em;
         }
         h1 {
-            color: #ffffff; /* White for main headings to differentiate from other texts */
-            font-size: 3em; /* Larger font size for the main heading */
-            margin-bottom: 0.5em; /* Adds space below the main heading */
+            color: #ffffff; /* White for main headings */
+            font-size: 3em;
+            margin-bottom: 0.5em;
         }
         p {
             color: #38c9ff; /* Consistent neon blue for text */
-            font-size: 1.5em; /* Larger font size for readability */
+            font-size: 1.5em;
         }
     </style>
 </head>
