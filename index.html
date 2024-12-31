@@ -22,7 +22,7 @@
             top: 0;
             z-index: 1000;
             display: flex;
-            justify-content: center;
+            justify-content: space-between;
             align-items: center;
             box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);
         }
@@ -33,6 +33,10 @@
             padding: 0;
             display: flex;
             gap: 2rem;
+        }
+
+        nav ul li {
+            position: relative;
         }
 
         nav ul li a {
@@ -48,73 +52,39 @@
             color: #ff006e;
         }
 
-        .about-container {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
-            border-radius: 20px;
-            padding: 3rem;
-            width: 90%;
-            max-width: 1200px;
-            margin: 8rem auto 2rem;
-            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);
+        /* Dropdown Menu Styling */
+        nav ul li ul {
+            position: absolute;
+            top: 2.5rem;
+            left: 0;
+            background: rgba(0, 0, 0, 0.9);
+            list-style: none;
+            padding: 0.5rem 0;
+            display: none;
+            border-radius: 10px;
+            box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.5);
         }
 
-        .about-text-container {
-            flex: 1;
-            padding-right: 2rem;
+        nav ul li ul li {
+            padding: 0.5rem 1.5rem;
         }
 
-        .about-title {
-            font-size: 6rem;
-            font-weight: bold;
-            color: rgba(131, 56, 236, 0.8);
-            letter-spacing: -3px;
-            margin-bottom: 1rem;
-        }
-
-        .about-heading {
-            font-size: 2.5rem;
-            font-weight: bold;
-            margin-bottom: 1rem;
-        }
-
-        .about-text {
-            font-size: 1.2rem;
-            line-height: 1.8;
-            margin-bottom: 2rem;
-        }
-
-        .btn {
-            padding: 1rem 2rem;
-            font-size: 1.2rem;
-            font-weight: bold;
-            color: #8338ec;
-            background: #ff006e;
-            border: none;
-            border-radius: 30px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .btn:hover {
-            background: #3a86ff;
+        nav ul li ul li a {
             color: #ffffff;
+            font-size: 1rem;
         }
 
-        .illustration-container {
-            flex: 1;
-            display: flex;
-            justify-content: center;
+        nav ul li ul li a:hover {
+            color: #8338ec;
         }
 
-        .illustration {
-            width: 350px;
-            height: auto;
-            border-radius: 20px;
-            border: 3px solid #ff006e;
-            box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.6);
+        nav ul li:hover ul {
+            display: block;
+        }
+
+        .content {
+            margin-top: 8rem;
+            text-align: center;
         }
 
         footer {
@@ -130,7 +100,13 @@
     <nav>
         <ul>
             <li><a href="#about">About Me</a></li>
-            <li><a href="#work">Work</a></li>
+            <li>
+                <a href="#work">Work</a>
+                <ul>
+                    <li><a href="#freelancing">Freelancing</a></li>
+                    <li><a href="#reports">Sample Reports</a></li>
+                </ul>
+            </li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#connect">Connect</a></li>
             <li><a href="#skills">Certifications & Skills</a></li>
@@ -138,35 +114,10 @@
         </ul>
     </nav>
 
-    <div class="about-container" id="about">
-        <div class="about-text-container">
-            <h1 class="about-title">ABOUT</h1>
-            <h2 class="about-heading">All Data, All Intelligence</h2>
-            <p class="about-text">
-                Hey, I’m Suhana Sayyad, a Computer Science undergraduate with a passion for OSINT and digital investigations. 
-                Skilled in uncovering actionable insights through data, analytics, and creativity.
-            </p>
-            <button class="btn">Get My Resume</button>
-        </div>
-        <div class="illustration-container">
-            <img src="https://raw.githubusercontent.com/SuhanaSayyad/SuhanaSayyad.github.io/main/ProfilePic.jpeg" alt="Illustration" class="illustration">
-        </div>
+    <div class="content">
+        <h1>Welcome to My Portfolio</h1>
+        <p>Explore my work and projects in OSINT and beyond!</p>
     </div>
-
-    <section id="work">
-        <h1 class="about-title">Work</h1>
-        <p class="about-text">
-            Case Studies: Detailed examples of your OSINT-related work.<br>
-            Freelancing: Projects completed for clients and testimonials.
-        </p>
-    </section>
-
-    <section id="projects">
-        <h1 class="about-title">Projects</h1>
-        <p class="about-text">
-            Showcase specific OSINT-related projects you've completed.
-        </p>
-    </section>
 
     <footer>
         &copy; 2024 Suhana Sayyad. All rights reserved.
