@@ -26,13 +26,20 @@
         }
 
         .about-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
             background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
             border-radius: 20px;
             padding: 3rem;
-            width: 80%;
-            max-width: 900px;
-            text-align: center;
+            width: 90%;
+            max-width: 1200px;
             box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .about-text-container {
+            flex: 1;
+            padding-right: 2rem;
         }
 
         .about-title {
@@ -40,11 +47,7 @@
             font-weight: bold;
             color: rgba(131, 56, 236, 0.8); /* Purple with transparency */
             letter-spacing: -3px;
-            position: absolute;
-            top: -60px;
-            left: 10%;
-            transform: translate(-10%, 10%);
-            z-index: -1;
+            margin-bottom: 1rem;
         }
 
         .about-heading {
@@ -76,25 +79,36 @@
             color: #ffffff;
         }
 
+        .illustration-container {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+        }
+
         .illustration {
-            margin-top: 2rem;
-            width: 100px;
+            width: 350px;
             height: auto;
-            display: inline-block;
+            border-radius: 20px; /* Rounded edges for the image */
+            border: 3px solid #ff006e; /* Reddish-pink border */
+            box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.6);
         }
     </style>
 </head>
 <body>
     <div class="about-container">
-        <h1 class="about-title">ABOUT</h1>
-        <h2 class="about-heading">All Work, All Play</h2>
-        <p class="about-text">
-            I'm a Computer Science Undergraduate and an OSINT Expert from [Your Country].  
-            Passionate about solving problems, I make investigations smarter with a blend of tools, analytics, and creativity.  
-            Curious at heart, professional by choice.
-        </p>
-        <button class="btn">Get My Resume</button>
-        <img src="https://raw.githubusercontent.com/SuhanaSayyad/SuhanaSayyad.github.io/main/ProfilePic.jpeg" alt="Illustration" class="illustration">
+        <div class="about-text-container">
+            <h1 class="about-title">ABOUT</h1>
+            <h2 class="about-heading">All Work, All Play</h2>
+            <p class="about-text">
+                I'm a Computer Science Undergraduate and an OSINT Expert from [Your Country].  
+                Passionate about solving problems, I make investigations smarter with a blend of tools, analytics, and creativity.  
+                Curious at heart, professional by choice.
+            </p>
+            <button class="btn">Get My Resume</button>
+        </div>
+        <div class="illustration-container">
+            <img src="https://raw.githubusercontent.com/SuhanaSayyad/SuhanaSayyad.github.io/main/ProfilePic.jpeg" alt="Illustration" class="illustration">
+        </div>
     </div>
 </body>
 </html>
