@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Section</title>
+    <title>Portfolio</title>
     <style>
         body {
             font-family: 'Arial', sans-serif;
@@ -11,97 +11,132 @@
             padding: 0;
             background: linear-gradient(120deg, #ff006e, #8338ec, #3a86ff); /* Vibrant gradient */
             background-size: 200% 200%;
-            background-position: 60% 50%; /* Static position of the gradient */
+            background-position: 60% 50%; /* Static gradient */
             color: #ffffff; /* White text */
             min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
         }
 
-        .about-container {
+        nav {
+            background: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+            padding: 1rem 2rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
             display: flex;
-            align-items: center;
             justify-content: space-between;
-            background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
-            border-radius: 20px;
-            padding: 3rem;
-            width: 90%;
-            max-width: 1200px;
+            align-items: center;
             box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);
         }
 
-        .about-text-container {
-            flex: 1;
-            padding-right: 2rem;
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 1.5rem;
         }
 
-        .about-title {
-            font-size: 6rem;
-            font-weight: bold;
-            color: rgba(131, 56, 236, 0.8); /* Purple with transparency */
-            letter-spacing: -3px;
-            margin-bottom: 1rem;
-        }
-
-        .about-heading {
-            font-size: 2.5rem;
-            font-weight: bold;
-            margin-bottom: 1rem;
-        }
-
-        .about-text {
+        nav ul li a {
+            text-decoration: none;
+            color: #ffffff;
             font-size: 1.2rem;
-            line-height: 1.8;
-            margin-bottom: 2rem;
-        }
-
-        .btn {
-            padding: 1rem 2rem;
-            font-size: 1.2rem;
-            font-weight: bold;
-            color: #8338ec; /* Deep purple text */
-            background: #ff006e; /* Reddish-pink background */
-            border: none;
-            border-radius: 30px;
-            cursor: pointer;
             transition: all 0.3s ease;
         }
 
-        .btn:hover {
-            background: #3a86ff; /* Neon blue hover effect */
+        nav ul li a:hover {
+            color: #ff006e; /* Highlight color on hover */
+        }
+
+        section {
+            padding: 8rem 2rem 5rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-size: 3rem;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 2rem;
+            color: #8338ec; /* Purple for section headings */
+        }
+
+        .content {
+            text-align: center;
+            font-size: 1.2rem;
+            line-height: 1.8;
+        }
+
+        footer {
+            background: rgba(0, 0, 0, 0.9); /* Dark footer */
+            padding: 2rem;
+            text-align: center;
             color: #ffffff;
-        }
-
-        .illustration-container {
-            flex: 1;
-            display: flex;
-            justify-content: center;
-        }
-
-        .illustration {
-            width: 350px;
-            height: auto;
-            border-radius: 20px; /* Rounded edges for the image */
-            border: 3px solid #ff006e; /* Reddish-pink border */
-            box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.6);
         }
     </style>
 </head>
 <body>
-    <div class="about-container">
-        <div class="about-text-container">
-            <h1 class="about-title">ABOUT</h1>
-            <h2 class="about-heading">All Data, All Intelligence</h2>
-            <p class="about-text">
-                Hey, I’m Suhana Sayyad, a Computer Science undergraduate with a passion for OSINT and digital investigations. 
-                Skilled in uncovering actionable insights through data, analytics, and creativity.
-            </p>
-            <button class="btn">Get My Resume</button>
-        </div>
-        <div class="illustration-container">
-            <img src="https://raw.githubusercontent.com/SuhanaSayyad/SuhanaSayyad.github.io/main/ProfilePic.jpeg" alt="Illustration" class="illustration">
-        </div>
-    </div>
+    <nav>
+        <ul>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#work">Work</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#connect">Connect</a></li>
+            <li><a href="#skills">Certifications & Skills</a></li>
+            <li><a href="#challenges">OSINT Challenges</a></li>
+        </ul>
+    </nav>
+
+    <section id="about">
+        <h1 class="section-title">About Me</h1>
+        <p class="content">
+            Hey, I’m Suhana Sayyad, a Computer Science undergraduate with a passion for OSINT and digital investigations. 
+            Skilled in uncovering actionable insights through data, analytics, and creativity.
+        </p>
+    </section>
+
+    <section id="work">
+        <h1 class="section-title">Work</h1>
+        <p class="content">
+            Case Studies: Detailed examples of your OSINT-related work. <br>
+            Freelancing: Projects completed for clients and testimonials.
+        </p>
+    </section>
+
+    <section id="projects">
+        <h1 class="section-title">Projects</h1>
+        <p class="content">
+            Showcase specific OSINT-related projects you've completed, demonstrating your skills in action.
+        </p>
+    </section>
+
+    <section id="connect">
+        <h1 class="section-title">Connect</h1>
+        <p class="content">
+            Email: suhana@example.com<br>
+            LinkedIn: linkedin.com/in/suhanasayyad<br>
+            GitHub: github.com/SuhanaSayyad
+        </p>
+    </section>
+
+    <section id="skills">
+        <h1 class="section-title">Certifications & Skills</h1>
+        <p class="content">
+            Certifications: Display your certifications in OSINT, cybersecurity, and related fields.<br>
+            Skills: Highlight your expertise in tools, technologies, and methodologies.
+        </p>
+    </section>
+
+    <section id="challenges">
+        <h1 class="section-title">OSINT Challenges</h1>
+        <p class="content">
+            Share a list of OSINT challenges you've solved, showcasing your problem-solving and analytical skills.
+        </p>
+    </section>
+
+    <footer>
+        &copy; 2024 Suhana Sayyad. All rights reserved.
+    </footer>
 </body>
 </html>
