@@ -16,7 +16,7 @@
 
         nav {
             background: rgba(0, 0, 0, 0.8);
-            padding: 1rem 2rem;
+            padding: 1.5rem 3rem;
             position: fixed;
             width: 100%;
             top: 0;
@@ -32,7 +32,7 @@
             margin: 0;
             padding: 0;
             display: flex;
-            gap: 2rem;
+            gap: 3rem;
         }
 
         nav ul li {
@@ -41,9 +41,9 @@
 
         nav ul li a {
             text-decoration: none;
-            font-weight: 500;
+            font-weight: 700;
             color: #ffffff;
-            font-size: 1.2rem;
+            font-size: 1.5rem;
             transition: all 0.3s ease;
         }
 
@@ -73,89 +73,13 @@
         }
 
         nav ul li ul li a {
-            font-size: 1rem;
+            font-size: 1.2rem;
             color: #ffffff;
             text-decoration: none;
         }
 
         nav ul li ul li a:hover {
             color: #3a86ff;
-        }
-
-        .about-container {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
-            border-radius: 20px;
-            padding: 3rem;
-            width: 90%;
-            max-width: 1200px;
-            margin: 8rem auto 2rem;
-            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);
-        }
-
-        .about-text-container {
-            flex: 1;
-            padding-right: 2rem;
-        }
-
-        .about-title {
-            font-size: 6rem;
-            font-weight: bold;
-            color: rgba(131, 56, 236, 0.8);
-            letter-spacing: -3px;
-            margin-bottom: 1rem;
-        }
-
-        .about-heading {
-            font-size: 2.5rem;
-            font-weight: bold;
-            margin-bottom: 1rem;
-        }
-
-        .about-text {
-            font-size: 1.2rem;
-            line-height: 1.8;
-            margin-bottom: 2rem;
-        }
-
-        .btn {
-            padding: 1rem 2rem;
-            font-size: 1.2rem;
-            font-weight: bold;
-            color: #8338ec;
-            background: #ff006e;
-            border: none;
-            border-radius: 30px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .btn:hover {
-            background: #3a86ff;
-            color: #ffffff;
-        }
-
-        .illustration-container {
-            flex: 1;
-            display: flex;
-            justify-content: center;
-        }
-
-        .illustration {
-            width: 350px;
-            height: auto;
-            border-radius: 20px;
-            border: 3px solid #ff006e;
-            box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.6);
-        }
-
-        footer {
-            background: rgba(0, 0, 0, 0.9);
-            padding: 2rem;
-            text-align: center;
-            color: #ffffff;
         }
     </style>
 </head>
@@ -172,28 +96,9 @@
                 </ul>
             </li>
             <li><a href="#projects">Projects</a></li>
-            <li><a href="#connect">Connect</a></li>
             <li><a href="#skills">Certifications & Skills</a></li>
+            <li><a href="#connect">Connect</a></li>
         </ul>
     </nav>
-
-    <div class="about-container" id="about">
-        <div class="about-text-container">
-            <h1 class="about-title">ABOUT</h1>
-            <h2 class="about-heading">All Data, All Intelligence</h2>
-            <p class="about-text">
-                Hey, I’m Suhana Sayyad, a Computer Science undergraduate with a passion for OSINT and digital investigations. 
-                Skilled in uncovering actionable insights through data, analytics, and creativity.
-            </p>
-            <button class="btn">Get My Resume</button>
-        </div>
-        <div class="illustration-container">
-            <img src="https://raw.githubusercontent.com/SuhanaSayyad/SuhanaSayyad.github.io/main/ProfilePic.jpeg" alt="Illustration" class="illustration">
-        </div>
-    </div>
-
-    <footer>
-        &copy; 2024 Suhana Sayyad. All rights reserved.
-    </footer>
 </body>
 </html>
