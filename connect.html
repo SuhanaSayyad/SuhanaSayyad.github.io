@@ -4,47 +4,167 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Connect</title>
-    <link href="styles.css" rel="stylesheet"> <!-- Link to your CSS file -->
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Fira Code', monospace;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(120deg, #ff006e, #8338ec, #3a86ff);
+            color: #ffffff;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        nav {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 1rem 2rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            font-weight: 500;
+            color: #ffffff;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #ff006e;
+        }
+
+        .connect-container {
+            background: rgba(0, 0, 0, 0.8);
+            border-radius: 20px;
+            padding: 3rem;
+            width: 90%;
+            max-width: 600px;
+            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);
+            text-align: center;
+        }
+
+        .connect-container h1 {
+            font-size: 2.5rem;
+            color: #ff006e;
+            margin-bottom: 1rem;
+        }
+
+        .connect-container p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .social-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .social-buttons a {
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: bold;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            background: #8338ec;
+            color: #ffffff;
+            transition: all 0.3s ease;
+        }
+
+        .social-buttons a:hover {
+            background: #3a86ff;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        form input, form textarea {
+            padding: 1rem;
+            border: none;
+            border-radius: 5px;
+            background: rgba(255, 255, 255, 0.1);
+            color: #ffffff;
+            font-size: 1rem;
+            outline: none;
+        }
+
+        form input::placeholder, form textarea::placeholder {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        form button {
+            padding: 1rem;
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #ffffff;
+            background: #ff006e;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        form button:hover {
+            background: #3a86ff;
+        }
+
+        footer {
+            margin-top: 2rem;
+            color: #ffffff;
+            font-size: 0.9rem;
+        }
+    </style>
 </head>
 <body>
-    <!-- Navigation Bar -->
     <nav>
         <ul>
-            <li><a href="index.html">About Me</a></li>
+            <li><a href="index.html">About</a></li>
             <li><a href="work.html">Work</a></li>
             <li><a href="projects.html">Projects</a></li>
             <li><a href="skills.html">Certifications & Skills</a></li>
-            <li><a href="connect.html" class="active">Connect</a></li>
+            <li><a href="connect.html">Connect</a></li>
         </ul>
     </nav>
 
-    <!-- Connect Page Content -->
     <div class="connect-container">
-        <h1 class="connect-title">Let's Connect!</h1>
-        <p class="connect-description">I'm excited to connect with you! Feel free to reach out through any of the platforms below or send me a direct message.</p>
-
-        <!-- Social Media Links -->
-        <div class="social-links">
-            <a href="https://linkedin.com/in/your-linkedin-profile" target="_blank">LinkedIn</a>
-            <a href="https://github.com/your-github-profile" target="_blank">GitHub</a>
-            <a href="https://twitter.com/your-twitter-profile" target="_blank">Twitter</a>
+        <h1>Let's Connect!</h1>
+        <p>I'm excited to connect with you! Feel free to reach out through any of the platforms below or send me a direct message.</p>
+        <div class="social-buttons">
+            <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+            <a href="https://github.com" target="_blank">GitHub</a>
+            <a href="https://twitter.com" target="_blank">Twitter</a>
         </div>
-
-        <!-- Email Contact -->
-        <div class="email-contact">
-            <p>Email me at: <a href="mailto:your-email@example.com">your-email@example.com</a></p>
-        </div>
-
-        <!-- Contact Form -->
-        <form class="contact-form" action="#" method="POST">
-            <input type="text" name="name" placeholder="Your Name" required>
-            <input type="email" name="email" placeholder="Your Email" required>
-            <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-            <button type="submit" class="btn">Send Message</button>
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea rows="5" placeholder="Your Message"></textarea>
+            <button type="submit">Send Message</button>
         </form>
     </div>
 
-    <!-- Footer -->
     <footer>
         &copy; 2024 Suhana Sayyad. All rights reserved.
     </footer>
