@@ -10,13 +10,13 @@
             font-family: 'Fira Code', monospace;
             margin: 0;
             padding: 0;
-            background: linear-gradient(120deg, #ff006e, #8338ec, #3a86ff); /* Vibrant gradient */
+            background: linear-gradient(120deg, #ff006e, #8338ec, #3a86ff);
             color: #ffffff;
         }
 
         nav {
             background: rgba(0, 0, 0, 0.8);
-            padding: 1.5rem 2rem;
+            padding: 1rem 2rem;
             position: fixed;
             width: 100%;
             top: 0;
@@ -32,14 +32,14 @@
             margin: 0;
             padding: 0;
             display: flex;
-            gap: 3rem;
+            gap: 2rem;
         }
 
         nav ul li a {
             text-decoration: none;
             font-weight: 500;
             color: #ffffff;
-            font-size: 1.5rem;
+            font-size: 1.2rem;
             transition: all 0.3s ease;
         }
 
@@ -48,50 +48,85 @@
         }
 
         .connect-container {
-            max-width: 800px;
-            margin: 10rem auto;
-            background: rgba(0, 0, 0, 0.9);
+            margin: 8rem auto 0;
+            width: 90%;
+            max-width: 600px;
+            background-color: rgba(0, 0, 0, 0.9);
             border-radius: 20px;
             padding: 3rem;
             box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);
             text-align: center;
         }
 
-        .connect-title {
+        .connect-container h1 {
             font-size: 2.5rem;
             color: #ff006e;
-            margin-bottom: 1rem;
+            margin-bottom: 1.5rem;
         }
 
-        .connect-text {
+        .connect-container p {
             font-size: 1.2rem;
-            line-height: 1.8;
+            margin-bottom: 2rem;
+        }
+
+        .connect-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
             margin-bottom: 2rem;
         }
 
         .connect-buttons a {
-            display: inline-block;
-            padding: 1rem 2rem;
-            margin: 0 1rem;
-            font-size: 1rem;
-            font-weight: bold;
+            text-decoration: none;
             color: #ffffff;
             background: #8338ec;
-            border-radius: 10px;
-            text-decoration: none;
-            transition: all 0.3s ease;
+            padding: 0.8rem 1.5rem;
+            border-radius: 30px;
+            font-size: 1.1rem;
+            transition: background 0.3s ease;
         }
 
         .connect-buttons a:hover {
             background: #3a86ff;
         }
 
-        footer {
-            background: rgba(0, 0, 0, 0.9);
+        .form-container input,
+        .form-container textarea {
+            width: 100%;
+            margin-bottom: 1rem;
             padding: 1rem;
+            border: none;
+            border-radius: 10px;
+            background: #2a2a2a;
+            color: #ffffff;
+            font-size: 1rem;
+        }
+
+        .form-container button {
+            width: 100%;
+            padding: 1rem;
+            font-size: 1.2rem;
+            color: #ffffff;
+            background: #ff006e;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .form-container button:hover {
+            background: #3a86ff;
+        }
+
+        footer {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 1rem 0;
             text-align: center;
             font-size: 1rem;
             color: #ffffff;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
         }
     </style>
 </head>
@@ -107,15 +142,19 @@
     </nav>
 
     <div class="connect-container">
-        <h1 class="connect-title">Let's Connect!</h1>
-        <p class="connect-text">
-            I'm excited to connect with you! Feel free to reach out through any of the platforms below or send me a direct message.
-        </p>
+        <h1>Let's Connect!</h1>
+        <p>I'm excited to connect with you! Feel free to reach out through any of the platforms below or send me a direct message.</p>
         <div class="connect-buttons">
-            <a href="https://linkedin.com/in/your-profile" target="_blank">LinkedIn</a>
-            <a href="https://github.com/your-profile" target="_blank">GitHub</a>
-            <a href="https://twitter.com/your-profile" target="_blank">Twitter</a>
+            <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+            <a href="https://github.com" target="_blank">GitHub</a>
+            <a href="https://twitter.com" target="_blank">Twitter</a>
         </div>
+        <form class="form-container">
+            <input type="text" placeholder="Name" required>
+            <input type="email" placeholder="Email" required>
+            <textarea placeholder="Message" rows="5" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
     </div>
 
     <footer>
