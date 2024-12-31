@@ -35,9 +35,12 @@
             gap: 2rem;
         }
 
+        nav ul li {
+            position: relative;
+        }
+
         nav ul li a {
             text-decoration: none;
-            font-family: 'Fira Code', monospace;
             font-weight: 500;
             color: #ffffff;
             font-size: 1.2rem;
@@ -46,6 +49,37 @@
 
         nav ul li a:hover {
             color: #ff006e;
+        }
+
+        /* Dropdown Styling */
+        nav ul li ul {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: rgba(0, 0, 0, 0.9);
+            list-style: none;
+            padding: 1rem;
+            border-radius: 10px;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        nav ul li:hover ul {
+            display: block;
+        }
+
+        nav ul li ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        nav ul li ul li a {
+            font-size: 1rem;
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        nav ul li ul li a:hover {
+            color: #3a86ff;
         }
 
         .about-container {
@@ -121,7 +155,6 @@
             background: rgba(0, 0, 0, 0.9);
             padding: 2rem;
             text-align: center;
-            font-family: 'Fira Code', monospace;
             color: #ffffff;
         }
     </style>
@@ -130,11 +163,17 @@
     <nav>
         <ul>
             <li><a href="#about">About Me</a></li>
-            <li><a href="#work">Work</a></li>
+            <li>
+                <a href="#work">Work</a>
+                <ul>
+                    <li><a href="#freelancing">Freelancing</a></li>
+                    <li><a href="#reports">Sample Reports</a></li>
+                    <li><a href="#challenges">OSINT Challenges</a></li>
+                </ul>
+            </li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#connect">Connect</a></li>
             <li><a href="#skills">Certifications & Skills</a></li>
-            <li><a href="#challenges">OSINT Challenges</a></li>
         </ul>
     </nav>
 
@@ -152,21 +191,6 @@
             <img src="https://raw.githubusercontent.com/SuhanaSayyad/SuhanaSayyad.github.io/main/ProfilePic.jpeg" alt="Illustration" class="illustration">
         </div>
     </div>
-
-    <section id="work">
-        <h1 class="about-title">Work</h1>
-        <p class="about-text">
-            Case Studies: Detailed examples of your OSINT-related work.<br>
-            Freelancing: Projects completed for clients and testimonials.
-        </p>
-    </section>
-
-    <section id="projects">
-        <h1 class="about-title">Projects</h1>
-        <p class="about-text">
-            Showcase specific OSINT-related projects you've completed.
-        </p>
-    </section>
 
     <footer>
         &copy; 2024 Suhana Sayyad. All rights reserved.
