@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Arial', sans-serif;
@@ -24,7 +25,7 @@
             top: 0;
             z-index: 1000;
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
             box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);
         }
@@ -34,100 +35,20 @@
             margin: 0;
             padding: 0;
             display: flex;
-            gap: 1.5rem;
+            gap: 2rem;
         }
 
         nav ul li a {
             text-decoration: none;
+            font-family: 'Orbitron', sans-serif; /* Futuristic font */
+            font-weight: 700; /* Bold weight */
             color: #ffffff;
-            font-size: 1.2rem;
+            font-size: 1.3rem;
             transition: all 0.3s ease;
         }
 
         nav ul li a:hover {
-            color: #ff006e;
-        }
-
-        section {
-            padding: 8rem 2rem 5rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .about-container {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent box */
-            border-radius: 20px;
-            padding: 3rem;
-            width: 90%;
-            max-width: 1200px;
-            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);
-            margin-bottom: 4rem;
-        }
-
-        .about-text-container {
-            flex: 1;
-            padding-right: 2rem;
-        }
-
-        .about-title {
-            font-size: 6rem;
-            font-weight: bold;
-            color: rgba(131, 56, 236, 0.8);
-            letter-spacing: -3px;
-            margin-bottom: 1rem;
-        }
-
-        .about-heading {
-            font-size: 2.5rem;
-            font-weight: bold;
-            margin-bottom: 1rem;
-        }
-
-        .about-text {
-            font-size: 1.2rem;
-            line-height: 1.8;
-            margin-bottom: 2rem;
-        }
-
-        .btn {
-            padding: 1rem 2rem;
-            font-size: 1.2rem;
-            font-weight: bold;
-            color: #8338ec;
-            background: #ff006e;
-            border: none;
-            border-radius: 30px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .btn:hover {
-            background: #3a86ff;
-            color: #ffffff;
-        }
-
-        .illustration-container {
-            flex: 1;
-            display: flex;
-            justify-content: center;
-        }
-
-        .illustration {
-            width: 350px;
-            height: auto;
-            border-radius: 20px;
-            border: 3px solid #ff006e;
-            box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.6);
-        }
-
-        footer {
-            background: rgba(0, 0, 0, 0.9);
-            padding: 2rem;
-            text-align: center;
-            color: #ffffff;
+            color: #ff006e; /* Highlight color on hover */
         }
     </style>
 </head>
@@ -144,63 +65,27 @@
     </nav>
 
     <section id="about">
-        <div class="about-container">
-            <div class="about-text-container">
-                <h1 class="about-title">ABOUT ME</h1>
-                <h2 class="about-heading">All Data, All Intelligence</h2>
-                <p class="about-text">
-                    Hey, I’m Suhana Sayyad, a Computer Science undergraduate with a passion for OSINT and digital investigations. 
-                    Skilled in uncovering actionable insights through data, analytics, and creativity.
-                </p>
-                <button class="btn">Get My Resume</button>
-            </div>
-            <div class="illustration-container">
-                <img src="https://raw.githubusercontent.com/SuhanaSayyad/SuhanaSayyad.github.io/main/ProfilePic.jpeg" alt="Illustration" class="illustration">
-            </div>
-        </div>
+        <!-- Section Content -->
     </section>
 
     <section id="work">
-        <h1 class="section-title">Work</h1>
-        <p class="content">
-            Case Studies: Detailed examples of your OSINT-related work. <br>
-            Freelancing: Projects completed for clients and testimonials.
-        </p>
+        <!-- Section Content -->
     </section>
 
     <section id="projects">
-        <h1 class="section-title">Projects</h1>
-        <p class="content">
-            Showcase specific OSINT-related projects you've completed, demonstrating your skills in action.
-        </p>
+        <!-- Section Content -->
     </section>
 
     <section id="connect">
-        <h1 class="section-title">Connect</h1>
-        <p class="content">
-            Email: suhana@example.com<br>
-            LinkedIn: linkedin.com/in/suhanasayyad<br>
-            GitHub: github.com/SuhanaSayyad
-        </p>
+        <!-- Section Content -->
     </section>
 
     <section id="skills">
-        <h1 class="section-title">Certifications & Skills</h1>
-        <p class="content">
-            Certifications: Display your certifications in OSINT, cybersecurity, and related fields.<br>
-            Skills: Highlight your expertise in tools, technologies, and methodologies.
-        </p>
+        <!-- Section Content -->
     </section>
 
     <section id="challenges">
-        <h1 class="section-title">OSINT Challenges</h1>
-        <p class="content">
-            Share a list of OSINT challenges you've solved, showcasing your problem-solving and analytical skills.
-        </p>
+        <!-- Section Content -->
     </section>
-
-    <footer>
-        &copy; 2024 Suhana Sayyad. All rights reserved.
-    </footer>
 </body>
 </html>
