@@ -9,12 +9,20 @@
             font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            background: linear-gradient(120deg, #3a86ff, #8338ec, #ff006e); /* Left blue to right pink gradient */
+            background: linear-gradient(120deg, #ff006e, #8338ec, #3a86ff); /* Vibrant gradient */
+            background-size: 200% 200%;
+            animation: gradientMove 6s ease infinite; /* Animated gradient */
             color: #ffffff; /* White text */
             min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
+        }
+
+        @keyframes gradientMove {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
         }
 
         .about-container {
