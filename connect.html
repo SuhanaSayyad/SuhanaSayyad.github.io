@@ -10,113 +10,84 @@
             font-family: 'Fira Code', monospace;
             margin: 0;
             padding: 0;
-            background: linear-gradient(120deg, #ff006e, #8338ec, #3a86ff);
+            background: linear-gradient(120deg, #ff006e, #8338ec, #3a86ff); /* Vibrant gradient */
             color: #ffffff;
             min-height: 100vh;
             display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-        }
-
-        nav {
-            background: rgba(0, 0, 0, 0.8);
-            padding: 1rem 2rem;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-            display: flex;
             justify-content: center;
             align-items: center;
-            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);
-        }
-
-        nav ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            gap: 2rem;
-        }
-
-        nav ul li a {
-            text-decoration: none;
-            font-weight: 500;
-            color: #ffffff;
-            font-size: 1.2rem;
-            transition: all 0.3s ease;
-        }
-
-        nav ul li a:hover {
-            color: #ff006e;
         }
 
         .connect-container {
-            background: rgba(0, 0, 0, 0.8);
+            background-color: rgba(0, 0, 0, 0.9); /* Dark semi-transparent background */
+            color: #ffffff;
             border-radius: 20px;
-            padding: 3rem;
-            width: 90%;
-            max-width: 600px;
+            padding: 3rem; /* Increase padding */
+            width: 60%; /* Adjust the width */
+            max-width: 800px; /* Allow a wider container */
+            margin: 3rem auto; /* Center the box */
             box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);
-            text-align: center;
         }
 
         .connect-container h1 {
-            font-size: 2.5rem;
             color: #ff006e;
-            margin-bottom: 1rem;
+            font-size: 2.5rem; /* Slightly bigger heading */
+            margin-bottom: 1.5rem;
+            text-align: center;
         }
 
         .connect-container p {
             font-size: 1.2rem;
+            line-height: 1.8;
             margin-bottom: 2rem;
+            text-align: center;
         }
 
-        .social-buttons {
+        .connect-container .social-links {
             display: flex;
             justify-content: center;
-            gap: 1rem;
+            gap: 1.5rem;
             margin-bottom: 2rem;
         }
 
-        .social-buttons a {
+        .connect-container .social-links a {
             text-decoration: none;
-            font-size: 1rem;
             font-weight: bold;
-            padding: 0.5rem 1rem;
-            border-radius: 5px;
-            background: #8338ec;
             color: #ffffff;
+            background: #8338ec;
+            padding: 0.8rem 1.5rem;
+            border-radius: 10px;
             transition: all 0.3s ease;
         }
 
-        .social-buttons a:hover {
-            background: #3a86ff;
+        .connect-container .social-links a:hover {
+            background: #ff006e;
         }
 
-        form {
+        .connect-container form {
             display: flex;
             flex-direction: column;
             gap: 1rem;
         }
 
-        form input, form textarea {
+        .connect-container input,
+        .connect-container textarea {
+            font-family: 'Fira Code', monospace;
+            font-size: 1rem;
             padding: 1rem;
             border: none;
-            border-radius: 5px;
-            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            background-color: #2d2d2d;
             color: #ffffff;
-            font-size: 1rem;
-            outline: none;
         }
 
-        form input::placeholder, form textarea::placeholder {
-            color: rgba(255, 255, 255, 0.7);
+        .connect-container textarea {
+            resize: none;
+            height: 150px; /* Taller text area */
         }
 
-        form button {
-            padding: 1rem;
+        .connect-container button {
+            padding: 1rem 2rem;
             font-size: 1.2rem;
             font-weight: bold;
             color: #ffffff;
@@ -127,46 +98,26 @@
             transition: all 0.3s ease;
         }
 
-        form button:hover {
+        .connect-container button:hover {
             background: #3a86ff;
-        }
-
-        footer {
-            margin-top: 2rem;
-            color: #ffffff;
-            font-size: 0.9rem;
         }
     </style>
 </head>
 <body>
-    <nav>
-        <ul>
-            <li><a href="index.html">About</a></li>
-            <li><a href="work.html">Work</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="skills.html">Certifications & Skills</a></li>
-            <li><a href="connect.html">Connect</a></li>
-        </ul>
-    </nav>
-
     <div class="connect-container">
         <h1>Let's Connect!</h1>
         <p>I'm excited to connect with you! Feel free to reach out through any of the platforms below or send me a direct message.</p>
-        <div class="social-buttons">
-            <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+        <div class="social-links">
+            <a href="https://www.linkedin.com" target="_blank">LinkedIn</a>
             <a href="https://github.com" target="_blank">GitHub</a>
             <a href="https://twitter.com" target="_blank">Twitter</a>
         </div>
-        <form>
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <textarea rows="5" placeholder="Your Message"></textarea>
+        <form action="mailto:your-email@example.com" method="POST" enctype="text/plain">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
             <button type="submit">Send Message</button>
         </form>
     </div>
-
-    <footer>
-        &copy; 2024 Suhana Sayyad. All rights reserved.
-    </footer>
 </body>
 </html>
