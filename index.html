@@ -12,6 +12,9 @@
             padding: 0;
             background: linear-gradient(120deg, #ff006e, #8338ec, #3a86ff); /* Vibrant gradient */
             color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Ensures the body takes up the full viewport height */
         }
 
         nav {
@@ -93,6 +96,7 @@
             max-width: 1200px;
             margin: 8rem auto 2rem;
             box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);
+            flex: 1; /* Ensures this takes up remaining space */
         }
 
         .about-text-container {
