@@ -32,12 +32,20 @@
             box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);
         }
 
+        nav .menu {
+            display: flex;
+            justify-content: center;
+            flex-grow: 1; /* Allows the menu to take up the available space */
+        }
+
         nav ul {
             list-style: none;
             margin: 0;
             padding: 0;
             display: flex;
             gap: 3rem; /* Increased gap */
+            align-items: center;
+            justify-content: center;
         }
 
         nav ul li {
@@ -56,35 +64,9 @@
             color: #ff006e;
         }
 
-        /* Dropdown Styling */
-        nav ul li ul {
-            display: none;
-            position: absolute;
-            top: 100%;
-            left: 0;
-            background: rgba(0, 0, 0, 0.9);
-            list-style: none;
-            padding: 1.5rem; /* Increased padding */
-            border-radius: 10px;
-            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
-        }
-
-        nav ul li:hover ul {
-            display: block;
-        }
-
-        nav ul li ul li {
-            margin-bottom: 1rem;
-        }
-
-        nav ul li ul li a {
-            font-size: 1.3rem; /* Increased font size */
-            color: #ffffff;
-            text-decoration: none;
-        }
-
-        nav ul li ul li a:hover {
-            color: #3a86ff;
+        nav .social-media {
+            display: flex;
+            gap: 1rem;
         }
 
         .about-container {
@@ -101,62 +83,6 @@
             flex: 1; /* Ensures this takes up remaining space */
         }
 
-        .about-text-container {
-            flex: 1;
-            padding-right: 2rem;
-        }
-
-        .about-title {
-            font-size: 6rem;
-            font-weight: bold;
-            color: rgba(131, 56, 236, 0.8);
-            letter-spacing: -3px;
-            margin-bottom: 1rem;
-        }
-
-        .about-heading {
-            font-size: 2.5rem;
-            font-weight: bold;
-            margin-bottom: 1rem;
-        }
-
-        .about-text {
-            font-size: 1.5rem; /* Increased font size */
-            line-height: 2;
-            margin-bottom: 2rem;
-        }
-
-        .btn {
-            padding: 1rem 2rem;
-            font-size: 1.5rem; /* Increased font size */
-            font-weight: bold;
-            color: #8338ec;
-            background: #ff006e;
-            border: none;
-            border-radius: 30px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .btn:hover {
-            background: #3a86ff;
-            color: #ffffff;
-        }
-
-        .illustration-container {
-            flex: 1;
-            display: flex;
-            justify-content: center;
-        }
-
-        .illustration {
-            width: 400px; /* Increased size */
-            height: auto;
-            border-radius: 20px;
-            border: 3px solid #ff006e;
-            box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.6);
-        }
-
         footer {
             background: rgba(0, 0, 0, 0.9);
             padding: 2rem;
@@ -167,22 +93,19 @@
 </head>
 <body>
    <nav>
-    <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#blog">Blog</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li>
-            <a href="#work">Work</a>
-            <ul>
-                <li><a href="#freelancing">Freelancing</a></li>
-                <li><a href="#challenges">OSINT Challenges</a></li>
-            </ul>
-        </li>
-        <li><a href="connect.html">Connect</a></li>
-        <!-- Adding social icons -->
-        <li><a href="https://github.com/YourUsername" target="_blank"><i class="fab fa-github"></i></a></li>
-        <li><a href="https://linkedin.com/in/YourUsername" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
-    </ul>
+    <div class="menu">
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#work">Work</a></li>
+            <li><a href="connect.html">Connect</a></li>
+        </ul>
+    </div>
+    <div class="social-media">
+        <a href="https://github.com/YourUsername" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://linkedin.com/in/YourUsername" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+    </div>
 </nav>
 
     <div class="about-container" id="about">
@@ -194,9 +117,6 @@
                 Skilled in uncovering actionable insights through data, analytics, and creativity.
             </p>
             <button class="btn">Get My Resume</button>
-        </div>
-        <div class="illustration-container">
-            <img src="https://raw.githubusercontent.com/SuhanaSayyad/SuhanaSayyad.github.io/main/ProfilePic.jpeg" alt="Illustration" class="illustration">
         </div>
     </div>
 
