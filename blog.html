@@ -50,51 +50,20 @@
             color: #ff006e;
         }
 
-        .blog-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            padding: 4rem 2rem 2rem;
-            margin-top: 6rem; /* Adjusting for fixed nav */
-        }
-
-        .blog-post {
-            flex-basis: 30%;
-            margin-bottom: 2rem;
-            background: #ffffff;
-            color: #333;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        }
-
-        .blog-post img {
-            width: 100%;
-            height: auto;
-        }
-
-        .blog-post h3 {
-            font-size: 1.5rem;
-            margin: 1rem;
-        }
-
-        .blog-post p {
-            font-size: 1rem;
-            margin: 0 1rem;
-        }
-
-        .blog-post span {
-            display: block;
-            font-size: 0.9rem;
-            color: #666;
-            margin: 1rem;
-        }
-
         footer {
             background: rgba(0, 0, 0, 0.9);
             padding: 2rem;
             text-align: center;
             color: #ffffff;
+            margin-top: auto;
+        }
+
+        main {
+            flex-grow: 1;
+            padding: 6rem 2rem 2rem; /* Top padding adjusts for fixed header */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
     </style>
 </head>
@@ -113,26 +82,9 @@
             <li><a href="connect.html">Connect</a></li>
         </ul>
     </nav>
-    <div class="blog-container">
-        <div class="blog-post">
-            <img src="path_to_image1.jpg" alt="Geolocation">
-            <h3>You want to geolocate an image? A guide on how to.</h3>
-            <p>Sometimes you may see an image and you want to know where it was taken. This guide teaches you the basics on how to go about it.</p>
-            <span>Aug 25, 2024 · Steve Williams</span>
-        </div>
-        <div class="blog-post">
-            <img src="path_to_image2.jpg" alt="AI Detection">
-            <h3>AI images detection. A practical guide.</h3>
-            <p>Let's face it, AI images are becoming perfect as time goes by and many people are being fooled by them.</p>
-            <span>Aug 23, 2024 · Steve Williams</span>
-        </div>
-        <div class="blog-post">
-            <img src="path_to_image3.jpg" alt="Identify EO">
-            <h3>How to identify explosive ordnance (EO) from conflict zones</h3>
-            <p>As an open source enthusiast, you may need to identify various weapons and ammunitions used in conflict zones.</p>
-            <span>Aug 21, 2024 · Steve Williams</span>
-        </div>
-    </div>
+    <main>
+        <!-- Main content goes here -->
+    </main>
     <footer>
         &copy; 2024 Suhana Sayyad. All rights reserved.
     </footer>
